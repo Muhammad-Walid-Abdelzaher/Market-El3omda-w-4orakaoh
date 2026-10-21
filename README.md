@@ -17,8 +17,8 @@ Database: SQL Server
 Will be added later
 
 ## Team
-Abdelrahman Emad Maarouf Ibrahim
-Abdelrahman Ahmed Fouad Hassany
-Nour El-Din Salah El-Din Abdelsalam Radwan
-Mohab Tamer Negm El-Din Abdrabbo
-Muhammad Walid Hussein Abdelzaher
+- Abdelrahman Emad Maarouf Ibrahim
+- Abdelrahman Ahmed Fouad Hassany
+- Nour El-Din Salah El-Din Abdelsalam Radwan
+- Mohab Tamer Negm El-Din Abdrabbo
+- Muhammad Walid Hussein Abdelzaher
