@@ -1,0 +1,132 @@
+/* ============================================================
+   Header Styles
+   ============================================================ */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sv-space-xl);
+  height: var(--sv-header-height);
+  background: var(--sv-bg-secondary);
+  border-bottom: 1px solid var(--sv-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+}
+
+.header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sv-text-primary);
+  letter-spacing: -0.4px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: var(--sv-text-muted);
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--sv-text-secondary);
+  font-weight: 400;
+}
+
+.header-date svg {
+  opacity: 0.6;
+}
+
+.header-refresh-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--sv-border);
+  border-radius: var(--sv-radius-md);
+  background: transparent;
+  color: var(--sv-text-secondary);
+  cursor: pointer;
+  transition: all var(--sv-transition-fast);
+}
+
+.header-refresh-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--sv-text-primary);
+  border-color: var(--sv-border-accent);
+}
+
+.header-refresh-btn:active svg {
+  transform: rotate(180deg);
+  transition: transform 0.4s;
+}
+
+.header-refresh-btn:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.header-refresh-btn.is-refreshing svg {
+  animation: header-refresh-spin 1s linear infinite;
+}
+
+@keyframes header-refresh-spin {
+  to { transform: rotate(360deg); }
+}
+
+.header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--sv-radius-full);
+  background: var(--sv-gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: box-shadow var(--sv-transition-fast);
+}
+
+.header-avatar:hover {
+  box-shadow: var(--sv-shadow-glow);
+}
+
+@media (max-width: 760px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .header-left {
+    gap: 0;
+  }
+
+  .header-subtitle,
+  .header-date {
+    display: none;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+}
